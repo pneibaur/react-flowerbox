@@ -1,15 +1,16 @@
+import ItemTags from "./ItemTags"
 
-function ItemShow(props){
+function ItemShow({name, image, price, tags}){
     return (
-        <div className="itemShow">
+        <div className="item">
             <div className="itemCard">
                 <div className="itemImg">
-                    <img src={`${props.image}`} alt={`${props.name}`} />
+                    <img src={`${image}`} alt={`${name}`} />
                 </div>
                 <div className="itemContent">
-                    <span className="spanName">{props.name}</span>
-                    <span className="spanPrice">{props.price}</span>
-                    <span className="spanTags">{props.tags} </span>
+                    <span className="spanName">{name}</span>
+                    <span className="spanPrice">{price}</span>
+                    <ItemTags tags={tags} />
                 </div>
             </div>
         </div>

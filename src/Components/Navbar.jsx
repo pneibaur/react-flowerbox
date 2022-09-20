@@ -2,7 +2,7 @@ function Navbar(){
     return (
         <nav>
             <div className="navbar">
-                <ul>
+                <ul className="navUl">
                     <li>about</li>
                     <li>collections</li>
                     <li>delivery service</li>

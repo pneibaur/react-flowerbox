@@ -3,6 +3,13 @@ import Banner from './Components/Banner';
 import Footer from './Components/Footer';
 import ItemShow from './Components/ItemShow';
 import Navbar from './Components/Navbar';
+import data from "./Components/seedData"
+
+const cards = data.map((ele, index) => {
+  return(
+  <ItemShow {...ele} key={index} />
+  );
+});
 
 function App() {
   return (
@@ -12,16 +19,8 @@ function App() {
       </header>
       <main>
         <Banner />
-        <div className='mainItems'>
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
-          <ItemShow />
+        <div className='mainCards'>
+          {cards}
         </div>
       </main>
       <footer>
