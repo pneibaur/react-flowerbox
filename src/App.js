@@ -1,16 +1,32 @@
 import './App.css';
+import Banner from './Components/Banner';
+import Footer from './Components/Footer';
+import ItemShow from './Components/ItemShow';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&display=swap" rel="stylesheet" />
-        <script  type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script  nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      </head> 
-      <header className="App-header">
-        <h1>FlowerBox</h1>
+      <header className="appHeader">
+        <Navbar />
       </header>
+      <main>
+        <Banner />
+        <div className='mainItems'>
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+          <ItemShow />
+        </div>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
